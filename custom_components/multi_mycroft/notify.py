@@ -3,7 +3,10 @@ import logging
 
 from mycroftapi import MycroftAPI
 
-from homeassistant.components.notify import BaseNotificationService
+from homeassistant.components.notify import (
+    BaseNotificationService,
+    PLATFORM_SCHEMA,
+)
 
 from homeassistant.helpers import config_validation as cv
 
