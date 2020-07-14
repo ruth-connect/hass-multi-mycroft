@@ -1,6 +1,8 @@
 """Mycroft AI notification platform."""
 import logging
 
+import voluptuous as vol
+
 from mycroftapi import MycroftAPI
 
 from homeassistant.components.notify import (
