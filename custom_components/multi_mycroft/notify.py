@@ -5,12 +5,13 @@ from mycroftapi import MycroftAPI
 
 from homeassistant.components.notify import BaseNotificationService
 
-from homeassistant.const import (
-    CONF_IP_ADDRESS,
-)
+from homeassistant.helpers import config_validation as cv
+
+from homeassistant.const import CONF_IP_ADDRESS
 
 _LOGGER = logging.getLogger(__name__)
 
+PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({vol.Required(CONF_IP_ADDRESS): cv.string})
 
 def get_service(hass, config, discovery_info=None):
     """Get the Multi Mycroft notification service."""
