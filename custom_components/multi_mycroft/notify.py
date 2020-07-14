@@ -15,9 +15,8 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({vol.Required(CONF_IP_ADDRESS): cv.stri
 
 def get_service(hass, config, discovery_info=None):
     """Get the Multi Mycroft notification service."""
-    return MultiMycroftNotificationService(
-        config.get(CONF_IP_ADDRESS)
-    )
+    ip_address = config.get(CONF_IP_ADDRESS)
+    return MultiMycroftNotificationService(hass, ip_address)
 
 
 class MultiMycroftNotificationService(BaseNotificationService):
