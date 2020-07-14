@@ -9,10 +9,20 @@ import homeassistant.helpers.config_validation as cv
 
 _LOGGER = logging.getLogger(__name__)
 
+CREATE_FIELDS = {
+    vol.Required(CONF_NAME): cv.string,
+    vol.Required(CONF_IP_ADDRESS): cv.string,
+}
+
 CONFIG_SCHEMA = vol.Schema(
-    {vol.Required(CONF_NAME): cv.string, vol.Required(CONF_IP_ADDRESS): cv.string},
+    {
+        vol.Optional(DOMAIN, default=[]): vol.Any(
+            vol.All(cv.ensure_list, [vol.Schema(CREATE_FIELDS)]), empty_value,
+        )
+    },
     extra=vol.ALLOW_EXTRA,
 )
+
 
 def setup(hass, config):
     return True
