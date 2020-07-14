@@ -1,0 +1,5 @@
+{
+  "name": "Multiple Mycroft",
+  "domains": ["multi-mycroft"],
+  "render_readme": true
+}

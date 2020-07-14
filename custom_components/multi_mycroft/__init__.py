@@ -1,0 +1,1 @@
+"""The Multiple Mycroft component."""
