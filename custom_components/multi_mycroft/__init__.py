@@ -18,6 +18,7 @@ def setup(hass, config):
     return True
 
 def setup_entry(hass, entry):
+    LOGGER.error("RUTH: %s, %s, %s", config[DOMAIN], config[CONF_NAME], config[CONF_IP_ADDRESS])
     hass.data[DOMAIN] = config[DOMAIN][CONF_NAME][CONF_IP_ADDRESS]
     discovery.load_platform(hass, "notify", DOMAIN, {}, config)
     return True
