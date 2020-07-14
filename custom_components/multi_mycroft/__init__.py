@@ -3,7 +3,7 @@ import logging
 
 import voluptuous as vol
 
-from homeassistant.const import IP_ADDRESS
+from homeassistant.const import CONF_IP_ADDRESS
 from homeassistant.helpers import discovery
 import homeassistant.helpers.config_validation as cv
 
@@ -12,7 +12,7 @@ _LOGGER = logging.getLogger(__name__)
 DOMAIN = "multi_mycroft"
 
 CONFIG_SCHEMA = vol.Schema(
-    {DOMAIN: vol.Schema({vol.Required(IP_ADDRESS): cv.string})}, extra=vol.ALLOW_EXTRA
+    {DOMAIN: vol.Schema({vol.Required(CONF_IP_ADDRESS): cv.string})}, extra=vol.ALLOW_EXTRA
 )
 
 
