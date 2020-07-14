@@ -1,5 +1,5 @@
 {
-  "domain": "multi-mycroft",
+  "domain": "multi_mycroft",
   "name": "Multiple Mycroft",
   "documentation": "https://github.com/ruth-connect/hass-multi-mycroft",
   "requirements": ["mycroftapi==2.0"],
