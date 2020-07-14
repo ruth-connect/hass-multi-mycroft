@@ -45,3 +45,14 @@ action:
       message: "There's somebody at the door."
     service: notify.mycroft_lounge
 ```
+
+## Note
+
+In order to get Mycroft able to receive messages from Home Assistant, you need to log on to each Mycroft instance via SSH and type:
+```
+sudo ufw allow 8181
+```
+
+This will open the Mycroft Message Bus port so that Home Assistant can publish to it.
+
+*WARNING* - this will also open your Mycrofts to other devices on your network publishing to its message bus (which they most probably won't - but you never know)...
