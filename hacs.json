@@ -1,6 +1,5 @@
 {
   "name": "Multiple Mycroft",
   "domains": ["multi_mycroft"],
-  "render_readme": true,
-  "version": "0.1"
+  "render_readme": true
 }
