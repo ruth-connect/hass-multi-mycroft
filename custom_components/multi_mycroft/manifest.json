@@ -3,5 +3,6 @@
   "name": "Multiple Mycroft",
   "documentation": "https://github.com/ruth-connect/hass-multi-mycroft",
   "requirements": ["mycroftapi==2.0"],
-  "codeowners": []
+  "codeowners": [],
+  "version": "0.1"
 }
